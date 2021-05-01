@@ -1,4 +1,4 @@
-const { Pool } = require('pg');
+const { Client } = require('pg');
 
 const db_config = {
 	user:'postgres',
@@ -7,7 +7,7 @@ const db_config = {
 	database:'postdb'
 }
 
-const pool = new Pool(db_config);
+const client = new Client(db_config);
 
-module.exports = pool;
+module.exports = client;
 

@@ -1,20 +1,34 @@
-const pool = require('postgres-config');
+const client = require('../dbqueries/postgres-config');
 
-class BcraModel {
+class SpacexMission {
 	constructor (new_name,type){
 		this._new_name 	= new_name;
 		this._type		= type;
 	}
 
-	createTable () {
-		pool.query('CREATE TABLE spacex_mission (
-				id				serial PRIMARY KEY UNIQUE NOT NULL,
-				name 			VARCHAR(50) NOT NULL,
-				manufacturer	VARCHAR(50) NOT NULL,
-				wikipedia		VARCHAR(50),
-				website			VARCHAR(50),
-				descrption		VARCHAR(150),
-			);');
+	createTable() {
+		client.connect()
+		client.query(`CREATE TABLE spacex_mission (
+			id				serial PRIMARY KEY UNIQUE NOT NULL,
+			name 			VARCHAR(50) NOT NULL,
+			manufacturer	VARCHAR(50) NOT NULL,
+			wikipedia		VARCHAR(50),
+			website			VARCHAR(50),
+			descrption		VARCHAR(150)
+		);`,(err,res) => {
+			if (err) { console.log(err) }
+			else { console.log('table created') }
+			client.end();
+		});
+	}
+
+	dropTable(){
+		client.connect()
+		client.query(`DROP TABLE spacex_mission;`,(err,res) =>{
+			if (err){ console.log(err) }
+			else { console.log('table droped') }
+			client.end();
+		})
 	}
 
 	update_info(){
@@ -41,4 +55,5 @@ class BcraModel {
 	}
 }
 
-BcraModel.createTable()
+missing = new SpacexMission('Carl','Sanchez');
+missing.createTable();
