@@ -1,26 +1,27 @@
-const pool = require('postgres-config');
-const sql_queries = require('sql_queries');
+const pool = require('./postgres-config');
+const sql_queries = require('./sql_queries');
 
 const call_errors = e => console.log(`the error is -> ${e}`);
 
-exports.dbqueries = class dbqueries {
-	constructor(misname,misid,manu,pay){
-		this.misname = misname.toString();
-		this.misid = misid.toString();
-		this.manu = manu.toString();
-		this.pay = pay;
-		
-		this.table = 'spacex_mission';
-	}
+exports.Query = class Query {
+	constructor(mis_id,misname,manuf,wiki,wsite,description){
+		this._misname 	= String(misname);
+		this._mis_id 	= String(mis_id);
+		this._manufs 	= String(manuf);
+		this._wiki		= String(wiki);
+		this._wsite		= String(wsite);
+		this._desc 		= String(description);
+		}
 	
 	sendInfo(){
+		sql_queries.fillTable(
+			this._mis_id,
+			this._misname,
+			this._manufs,
+			this._wiki,
+			this._wsite,
+			this._desc);
+			}
 
-		let manufac = this.manu[0];
-		let fpay = this.pay[0];
-		let spay = this.pay[1];
-
-		let res = sql_queries.fillTable(this.misid,this.misname, manufac,fpay,spay);
-		console.log(res.rows);
+	add_new_record(){ console.log("recording, actually not") }
 	}
-
-}

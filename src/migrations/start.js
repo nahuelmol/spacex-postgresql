@@ -9,12 +9,12 @@ class SpacexMission {
 	createTable() {
 		client.connect()
 		client.query(`CREATE TABLE spacex_mission (
-			id				serial PRIMARY KEY UNIQUE NOT NULL,
+			id				VARCHAR(10) PRIMARY KEY UNIQUE NOT NULL,
 			name 			VARCHAR(50) NOT NULL,
-			manufacturer	VARCHAR(50) NOT NULL,
-			wikipedia		VARCHAR(50),
-			website			VARCHAR(50),
-			descrption		VARCHAR(150)
+			manufacturer	text NOT NULL,
+			wikipedia		text,
+			website			text,
+			description		text
 		);`,(err,res) => {
 			if (err) { console.log(err) }
 			else { console.log('table created') }
@@ -55,5 +55,29 @@ class SpacexMission {
 	}
 }
 
-missing = new SpacexMission('Carl','Sanchez');
-missing.createTable();
+spacex_table = new SpacexMission();
+
+//function menu(){
+//	console.log("Choose a table\n");
+//	console.log("1:spacex_table\n");
+//	const table;
+//
+//	case(table){
+//		'1':table_actions('spacex_table');
+//	}
+//}
+//function table_actions(table_name){
+//	int opt = 0;
+//	console.log("Choose an action for that table:\n");
+//	console.log(`1:create ${table_name} table\n`);
+//	console.log(`2:drop ${table_name} table\n`);
+//	console.log("3:delete column\n");
+//	console.log("4:add column\n");
+//	case(opt){
+//		1:spacex_table.createTable();
+//		2:spacex_table.dropTable();
+//		3:spacex_table.deleteColumn();
+//		4:spacex_table.addColumn();
+//	}
+//}
+spacex_table.createTable()
