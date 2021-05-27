@@ -5,6 +5,7 @@
   "main": "src/server/server.js",
   "dependencies": {
     "chai": "^4.2.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "neon-cli": "^0.4.0",
     "nodemon": "^2.0.4",
@@ -15,7 +16,7 @@
     "mocha": "^8.1.2"
   },
   "scripts": {
-    "start":"node src/server/server.js",
+    "start": "node src/server/server.js",
     "test": "mocha"
   },
   "repository": {
