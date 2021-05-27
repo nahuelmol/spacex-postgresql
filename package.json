@@ -2,11 +2,12 @@
   "name": "spacex-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server/server.js",
   "dependencies": {
     "chai": "^4.2.0",
-    "nodemon": "^2.0.4",
+    "express": "^4.17.1",
     "neon-cli": "^0.4.0",
+    "nodemon": "^2.0.4",
     "pg": "^8.6.0",
     "request": "^2.88.2"
   },
