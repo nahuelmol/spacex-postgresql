@@ -8,11 +8,8 @@ app.use(express.static(__dirname + 'src/views'));
 
 //app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-})
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
   //res.render('index.html');
   res.sendFile(path.join(__dirname, '../views/index.html'));
 })
