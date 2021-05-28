@@ -24,9 +24,9 @@ heroku --tail
 ## Links
 In production
 ```
-https://limitless-brook-23985.herokuapp.com
+https://postgresapi-6969.herokuapp.com
 ```
-In Git
+In heroku git
 ```
-https://git.heroku.com/limitless-brook-23985.git
+https://git.heroku.com/postgresapi-6969.git
 ```
