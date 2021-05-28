@@ -42,12 +42,9 @@ heroku --tail
 
 <h3>Links</h3>
 
-In production
-```
-https://postgresapi-6969.herokuapp.com
-```
+<a href="https://postgresapi-6969.herokuapp.com">In production</a>
 
-In heroku git
-```
-https://git.heroku.com/postgresapi-6969.git
-```
+<a href="https://git.heroku.com/postgresapi-6969.git">I don't know what is this but i've an error</a>
+
+<h3>And</h3>
+<p>if you see something wrong here, you're free to controbute to this project. Surely i'm gonna look that</p>
