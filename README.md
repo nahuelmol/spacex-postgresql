@@ -4,7 +4,10 @@ That is an implementation using postgres as database system.
 The main pupose is to apply a modular arquitecture, like in django is estableshed.
 
 <h3>Create Procfile</h3>
+
 What is it?
+<p>That is an empy format file, it works for heroku to know what file initiate the project</p>
+
 ```
 web: node src/server/server.js
 ```
