@@ -57,27 +57,5 @@ class SpacexMission {
 
 spacex_table = new SpacexMission();
 
-//function menu(){
-//	console.log("Choose a table\n");
-//	console.log("1:spacex_table\n");
-//	const table;
-//
-//	case(table){
-//		'1':table_actions('spacex_table');
-//	}
-//}
-//function table_actions(table_name){
-//	int opt = 0;
-//	console.log("Choose an action for that table:\n");
-//	console.log(`1:create ${table_name} table\n`);
-//	console.log(`2:drop ${table_name} table\n`);
-//	console.log("3:delete column\n");
-//	console.log("4:add column\n");
-//	case(opt){
-//		1:spacex_table.createTable();
-//		2:spacex_table.dropTable();
-//		3:spacex_table.deleteColumn();
-//		4:spacex_table.addColumn();
-//	}
-//}
+
 spacex_table.createTable()

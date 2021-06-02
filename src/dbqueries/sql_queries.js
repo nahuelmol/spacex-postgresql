@@ -17,7 +17,3 @@ exports.fillTable = (mis_id,misname,manufs,wiki,wsite,desc) => {
 		console.log('error on functions file, sendInfo method');
 	}
 };
-//
-//exports.update_info = () => {
-//	console.log("actually dont actualizing, but you're in the correct function");
-//}
